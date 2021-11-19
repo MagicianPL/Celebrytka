@@ -20,17 +20,43 @@ header:before {
   background-size: cover;
   background-position: 0% 44%;
   opacity: 0.7;
+  z-index: -1;
+}
+header img {
+  width: 19rem;
+  height: 19rem;
+  border-radius: 50%;
+  z-index: 10;
+  -webkit-box-shadow: inset 0px 0px 12px 2px #36c6cc;
+  -moz-box-shadow: inset 0px 0px 12px 2px #36c6cc;
+  box-shadow: inset 0px 0px 12px 2px #36c6cc;
 }
 header .absolute-bar {
   height: 48%;
   width: 100%;
   background: #11b9bc;
-  opacity: 40%;
+  opacity: 0.7;
   position: absolute;
 }
 header .absolute-top {
   top: 0;
   left: 0;
+}
+@media (min-width: 500px) {
+  header .absolute-top {
+    -webkit-clip-path: polygon(14% 0, 100% 0, 100% 100%, 0% 100%);
+    clip-path: polygon(14% 0, 100% 0, 100% 100%, 0% 100%);
+  }
+}
+header .absolute-bottom {
+  bottom: 0;
+  left: 0;
+}
+@media (min-width: 500px) {
+  header .absolute-bottom {
+    -webkit-clip-path: polygon(0 0, 100% 0, 86% 100%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0, 86% 100%, 0% 100%);
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
