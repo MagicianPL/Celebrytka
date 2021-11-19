@@ -1,6 +1,42 @@
+$primary-color: #11b9bc;
+$dark-of-primary: #085c5e;
+$gold-color: #C9B079;
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 19rem;
+    position: relative;
+
+    &:before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image: url("assets/header-background.jpg");
+        background-size: cover;
+        background-position: 0% 44%;
+        opacity: 0.7;
+    }
+
+    .absolute-bar {
+        height: 48%;
+        width: 100%;
+        background: $primary-color;
+        opacity: 40%;
+        position: absolute;
+    }
+
+    .absolute-top {
+        top: 0;
+        left: 0;
+    }
 }
 
