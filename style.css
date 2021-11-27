@@ -279,10 +279,10 @@ header .absolute-bottom {
 .products-page .product {
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: auto 1fr;
-      grid-template-rows: auto 1fr;
-  -ms-grid-columns: auto 550px;
-      grid-template-columns: auto 550px;
+  -ms-grid-rows: auto auto;
+      grid-template-rows: auto auto;
+  -ms-grid-columns: auto 520px;
+      grid-template-columns: auto 520px;
   margin-bottom: 70px;
 }
 
@@ -294,6 +294,8 @@ header .absolute-bottom {
   padding-bottom: 24px;
   border-bottom: 3px solid #C9B079;
   text-align: center;
+  font-size: 30px;
+  font-weight: bold;
 }
 
 .products-page .product .right {
@@ -334,8 +336,8 @@ header .absolute-bottom {
 }
 
 .products-page .product-right {
-  -ms-grid-columns: 550px auto;
-      grid-template-columns: 550px auto;
+  -ms-grid-columns: 520px auto;
+      grid-template-columns: 520px auto;
 }
 
 @-webkit-keyframes appearing {

@@ -237,8 +237,8 @@ header {
 
     .product {
         display: grid;
-        grid-template-rows: auto 1fr;
-        grid-template-columns: auto 550px;
+        grid-template-rows: auto auto;
+        grid-template-columns: auto 520px;
         margin-bottom: 70px;
 
         h1 {
@@ -247,6 +247,8 @@ header {
             padding-bottom: 24px;
             border-bottom: 3px solid #C9B079;
             text-align: center;
+            font-size: 30px;
+            font-weight: bold;
         }
 
         .right {
@@ -278,7 +280,7 @@ header {
     }
 
     .product-right {
-        grid-template-columns: 550px auto;
+        grid-template-columns: 520px auto;
     }
 }
 
