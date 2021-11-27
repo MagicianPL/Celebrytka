@@ -222,8 +222,13 @@ header {
         inset: 0;
         background: url("./assets//gold.jpg");
         background-size: cover;
+        background-attachment: fixed;
         opacity: 0.1;
         z-index: -2;
+
+        @media (max-width: 1024px) {
+            background-attachment: scroll;
+        }
     }
 
     &::after {
@@ -241,6 +246,17 @@ header {
         grid-template-columns: auto 520px;
         margin-bottom: 70px;
 
+
+        @media (max-width: 1050px) {
+            grid-template-columns: auto 1fr;
+        }
+
+        @media(max-width: 900px) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
         h1 {
             grid-column: 1/2;
             margin-bottom: 32px;
@@ -249,6 +265,10 @@ header {
             text-align: center;
             font-size: 30px;
             font-weight: bold;
+
+            @media (max-width: 520px) {
+                line-height: 35px;
+            }
         }
 
         .right {
@@ -261,6 +281,11 @@ header {
             border: 2px solid #C9B079;
             box-shadow: 0px 0px 3px 3px #C9B079 inset;
             max-width: 350px;
+
+            @media (max-width: 900px) {
+                max-width: 470px;
+                margin-bottom: 25px;
+            }
         }
 
         img {
@@ -276,6 +301,15 @@ header {
             text-align: center;
             font-size: 22px;
             line-height: 30px;
+            padding: 0 8px;
+
+            @media (max-width: 900px) {
+                padding: 0 60px;
+            }
+
+            @media (max-width: 570px) {
+                padding: 0 8px;
+            }
         }
     }
 

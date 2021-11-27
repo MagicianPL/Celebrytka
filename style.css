@@ -263,8 +263,15 @@ header .absolute-bottom {
   inset: 0;
   background: url("./assets//gold.jpg");
   background-size: cover;
+  background-attachment: fixed;
   opacity: 0.1;
   z-index: -2;
+}
+
+@media (max-width: 1024px) {
+  .products-page::before {
+    background-attachment: scroll;
+  }
 }
 
 .products-page::after {
@@ -286,6 +293,28 @@ header .absolute-bottom {
   margin-bottom: 70px;
 }
 
+@media (max-width: 1050px) {
+  .products-page .product {
+    -ms-grid-columns: auto 1fr;
+        grid-template-columns: auto 1fr;
+  }
+}
+
+@media (max-width: 900px) {
+  .products-page .product {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
 .products-page .product h1 {
   -ms-grid-column: 1;
   -ms-grid-column-span: 1;
@@ -296,6 +325,12 @@ header .absolute-bottom {
   text-align: center;
   font-size: 30px;
   font-weight: bold;
+}
+
+@media (max-width: 520px) {
+  .products-page .product h1 {
+    line-height: 35px;
+  }
 }
 
 .products-page .product .right {
@@ -316,6 +351,13 @@ header .absolute-bottom {
   max-width: 350px;
 }
 
+@media (max-width: 900px) {
+  .products-page .product .wrapper-box-shadow {
+    max-width: 470px;
+    margin-bottom: 25px;
+  }
+}
+
 .products-page .product img {
   width: 100%;
   z-index: -1;
@@ -333,6 +375,19 @@ header .absolute-bottom {
   text-align: center;
   font-size: 22px;
   line-height: 30px;
+  padding: 0 8px;
+}
+
+@media (max-width: 900px) {
+  .products-page .product p {
+    padding: 0 60px;
+  }
+}
+
+@media (max-width: 570px) {
+  .products-page .product p {
+    padding: 0 8px;
+  }
 }
 
 .products-page .product-right {
