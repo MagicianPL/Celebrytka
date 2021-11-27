@@ -262,6 +262,7 @@ header .absolute-bottom {
   background: url("./assets//gold.jpg");
   background-size: cover;
   opacity: 0.1;
+  z-index: -1;
 }
 
 .products-page::after {
@@ -270,6 +271,42 @@ header .absolute-bottom {
   inset: 0;
   background: #36C6CC;
   opacity: 0.4;
+  z-index: -1;
+}
+
+.products-page .product {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: auto 1fr;
+      grid-template-rows: auto 1fr;
+  -ms-grid-columns: auto 1fr;
+      grid-template-columns: auto 1fr;
+}
+
+.products-page .product h1 {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+  margin-bottom: 32px;
+}
+
+.products-page .product img {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
+  width: 100%;
+  max-width: 350px;
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
+.products-page .product p {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 
 @-webkit-keyframes appearing {
