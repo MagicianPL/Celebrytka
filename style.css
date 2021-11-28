@@ -423,12 +423,32 @@ header .absolute-bottom {
   gap: 3px;
 }
 
+@media (max-width: 320px) {
+  .opinions-page .stars img {
+    width: 50px;
+  }
+}
+
+@media (max-width: 270px) {
+  .opinions-page .stars img {
+    width: 40px;
+  }
+}
+
 .opinions-page .fullname {
   position: absolute;
   bottom: 10px;
   right: 0;
   text-align: right;
   font-style: italic;
+}
+
+@media (max-width: 770px) {
+  .opinions-page .fullname {
+    position: static;
+    text-align: center;
+    margin-top: 22px;
+  }
 }
 
 @-webkit-keyframes appearing {

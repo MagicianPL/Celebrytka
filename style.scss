@@ -339,6 +339,16 @@ header {
         justify-content: center;
         margin-top: 32px;
         gap: 3px;
+
+        img {
+            @media (max-width: 320px) {
+                width: 50px;
+            }
+
+            @media (max-width: 270px) {
+                width: 40px;
+            }
+        }
     }
 
     .fullname {
@@ -347,6 +357,12 @@ header {
         right: 0;
         text-align: right;
         font-style: italic;
+
+        @media (max-width: 770px) {
+            position: static;
+            text-align: center;
+            margin-top: 22px;
+        }
     }
 }
 
