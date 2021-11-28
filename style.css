@@ -399,11 +399,17 @@ header .absolute-bottom {
   padding: 67px 10px;
 }
 
+.opinions-page .slides {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 850px;
+  border: 1px solid red;
+}
+
 .opinions-page .opinion {
   position: relative;
-  width: 100%;
-  max-width: 850px;
-  margin: 0 auto;
+  min-width: 100%;
 }
 
 .opinions-page p {

@@ -321,11 +321,15 @@ header {
 .opinions-page {
     padding: 67px 10px;
 
+    .slides {
+        display: flex;
+        max-width: 850px;
+        border: 1px solid red;
+    }
+
     .opinion {
         position: relative;
-        width: 100%;
-        max-width: 850px;
-        margin: 0 auto;
+        min-width: 100%;
     }
 
     p {
