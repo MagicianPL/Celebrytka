@@ -399,17 +399,24 @@ header .absolute-bottom {
   padding: 67px 10px;
 }
 
+.opinions-page .container-opinions {
+  max-width: 850px;
+  margin: 0 auto;
+  overflow-x: hidden;
+}
+
 .opinions-page .slides {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  max-width: 850px;
-  border: 1px solid red;
+  width: 100%;
+  padding: 0;
 }
 
 .opinions-page .opinion {
   position: relative;
   min-width: 100%;
+  padding: 1rem;
 }
 
 .opinions-page p {
@@ -443,8 +450,8 @@ header .absolute-bottom {
 
 .opinions-page .fullname {
   position: absolute;
-  bottom: 10px;
-  right: 0;
+  bottom: calc(10px + 1rem);
+  right: 1rem;
   text-align: right;
   font-style: italic;
 }
