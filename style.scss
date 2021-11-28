@@ -318,6 +318,38 @@ header {
     }
 }
 
+.opinions-page {
+    padding: 67px 10px;
+
+    .opinion {
+        position: relative;
+        width: 100%;
+        max-width: 850px;
+        margin: 0 auto;
+    }
+
+    p {
+        font-weight: bold;
+        font-size: 22px;
+        text-align: center;
+    }
+
+    .stars {
+        display: flex;
+        justify-content: center;
+        margin-top: 32px;
+        gap: 3px;
+    }
+
+    .fullname {
+        position: absolute;
+        bottom: 10px;
+        right: 0;
+        text-align: right;
+        font-style: italic;
+    }
+}
+
 @keyframes appearing {
     100% {
         opacity: 1;
