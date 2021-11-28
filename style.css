@@ -540,13 +540,22 @@ header .absolute-bottom {
   text-align: center;
 }
 
+.localization-page .flex-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
 .localization-page p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   gap: 30px;
   font-size: 30px;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
   font-weight: bold;
 }
 
@@ -578,7 +587,6 @@ header .absolute-bottom {
   width: 100%;
   max-width: 600px;
   height: 450px;
-  margin: 0 auto;
   display: block;
   border: 2px solid #C9B079;
   -webkit-box-shadow: 0px 0px 3px 3px #C9B079 inset;
