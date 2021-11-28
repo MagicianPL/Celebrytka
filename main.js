@@ -1,5 +1,3 @@
-console.log("Main js");
-
 /* For displaying opinions on page */
 const slide = document.querySelector(".slides");
 let slides = document.querySelectorAll(".opinion");
@@ -37,3 +35,4 @@ slide.addEventListener("transitionend", () => {
 });
 
 startSlide();
+/* ********************************************************************************** */
