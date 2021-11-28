@@ -12,6 +12,7 @@ html {
 body {
   overflow-x: hidden;
   line-height: 26px;
+  font-family: 'Lato', sans-serif;
 }
 
 header {
@@ -162,6 +163,8 @@ header .absolute-bottom {
 .homepage .content .image {
   width: 13.8rem;
   position: relative;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
 }
 
 @media (max-width: 800px) {
@@ -182,6 +185,7 @@ header .absolute-bottom {
 .homepage .content .image img {
   width: 100%;
   z-index: -1;
+  display: block;
 }
 
 .homepage .content .stuff {
@@ -464,10 +468,48 @@ header .absolute-bottom {
   }
 }
 
+.gallery {
+  position: relative;
+  padding: 30px;
+}
+
+.gallery::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: #36C6CC;
+  opacity: 0.4;
+  z-index: -1;
+}
+
+.gallery::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("./assets/localization-bg.jpg");
+  background-size: cover;
+  opacity: 0.4;
+  z-index: -2;
+  background-attachment: fixed;
+}
+
+@media (max-width: 1024px) {
+  .gallery::after {
+    background-attachment: scroll;
+  }
+}
+
 .gallery img {
   display: block;
   width: 100%;
   margin-bottom: 16px;
+  -webkit-transition: all 0.7s;
+  transition: all 0.7s;
+}
+
+.gallery img:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 
 .gallery ul {
@@ -487,32 +529,6 @@ header .absolute-bottom {
 .localization-page {
   position: relative;
   padding: 30px;
-}
-
-.localization-page::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-color: #36C6CC;
-  opacity: 0.4;
-  z-index: -1;
-}
-
-.localization-page::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image: url("./assets/localization-bg.jpg");
-  background-size: cover;
-  opacity: 0.4;
-  z-index: -2;
-  background-attachment: fixed;
-}
-
-@media (max-width: 1024px) {
-  .localization-page::after {
-    background-attachment: scroll;
-  }
 }
 
 .localization-page h1 {

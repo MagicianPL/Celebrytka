@@ -16,6 +16,7 @@ html {
 body {
     overflow-x: hidden;
     line-height: 26px;
+    font-family: 'Lato', sans-serif;
 }
 
 header {
@@ -133,6 +134,7 @@ header {
         .image {
             width: 13.8rem;
             position: relative;
+            align-self: flex-start;
 
         @media (max-width: 800px) {
             height: 306px;
@@ -151,6 +153,7 @@ header {
             img {
                 width: 100%;
                 z-index: -1;
+                display: block;
             }
         }
 
@@ -379,26 +382,6 @@ header {
 }
 
 .gallery {
-    img {
-        display: block;
-        width: 100%;
-        margin-bottom: $gap;
-    }
-
-    ul {
-        
-        column-count: 3;
-        list-style: none;
-        column-gap: $gap;
-        padding: $gap;
-    }
-
-    li {
-        break-inside: avoid;
-    }
-}
-
-.localization-page {
     position: relative;
     padding: 30px;
 
@@ -425,6 +408,34 @@ header {
             background-attachment: scroll;
         }
     }
+
+    img {
+        display: block;
+        width: 100%;
+        margin-bottom: $gap;
+        transition: all 0.7s;
+
+        &:hover {
+            transform: scale(1.2);
+        }
+    }
+
+    ul {
+        
+        column-count: 3;
+        list-style: none;
+        column-gap: $gap;
+        padding: $gap;
+    }
+
+    li {
+        break-inside: avoid;
+    }
+}
+
+.localization-page {
+    position: relative;
+    padding: 30px;
 
     h1 {
             margin-bottom: 32px;
