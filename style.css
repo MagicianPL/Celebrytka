@@ -540,6 +540,40 @@ header .absolute-bottom {
   text-align: center;
 }
 
+.localization-page p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 30px;
+  font-size: 30px;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+.localization-page .phone-num {
+  position: relative;
+  left: 6px;
+}
+
+.localization-page i {
+  color: #36C6CC;
+  font-size: 30px;
+}
+
+.localization-page .messenger i {
+  color: #006AFF;
+}
+
+.localization-page .address {
+  line-height: 37px;
+  position: relative;
+  left: 3px;
+}
+
+.localization-page .address i {
+  color: #f16623;
+}
+
 .localization-page iframe {
   width: 100%;
   max-width: 600px;

@@ -447,6 +447,38 @@ header {
             text-align: center;
     }
 
+    p {
+        display: flex;
+        gap: 30px;
+        font-size: 30px;
+        margin-bottom: 30px;
+        font-weight: bold;
+    }
+
+    .phone-num {
+        position: relative;
+        left: 6px;
+    }
+
+    i {
+        color: #36C6CC;
+        font-size: 30px;
+    }
+
+    .messenger i {
+        color: #006AFF;
+    }
+
+    .address {
+        line-height: 37px;
+        position: relative;
+        left: 3px;
+
+        i {
+            color: #f16623;
+        }
+    }
+
     iframe {
         width: 100%;
         max-width: 600px;
