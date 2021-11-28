@@ -465,13 +465,39 @@ header .absolute-bottom {
 }
 
 .localization-page {
-  padding: 60px;
+  position: relative;
+  padding: 30px;
 }
 
-.localization-page #map {
-  width: 100%;
-  height: 400px;
-  background: gray;
+.localization-page::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: #36C6CC;
+  opacity: 0.4;
+  z-index: -1;
+}
+
+.localization-page::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("./assets/localization-bg.jpg");
+  background-size: cover;
+  opacity: 0.4;
+  z-index: -2;
+  background-attachment: fixed;
+}
+
+.localization-page h1 {
+  margin-bottom: 32px;
+  padding-bottom: 24px;
+  border-bottom: 3px solid #C9B079;
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: left;
+  display: inline-block;
 }
 
 .localization-page iframe {
@@ -480,6 +506,9 @@ header .absolute-bottom {
   height: 450px;
   margin: 0 auto;
   display: block;
+  border: 2px solid #C9B079;
+  -webkit-box-shadow: 0px 0px 3px 3px #C9B079 inset;
+          box-shadow: 0px 0px 3px 3px #C9B079 inset;
 }
 
 @-webkit-keyframes appearing {
