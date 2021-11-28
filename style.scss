@@ -144,6 +144,7 @@ header {
         @media (max-width: 800px) {
             height: 306px;
             overflow: hidden;
+            margin: 0 auto;
         }
 
         &::after {
@@ -254,6 +255,7 @@ header {
         grid-template-rows: auto auto;
         grid-template-columns: auto 520px;
         margin-bottom: 70px;
+        transition: all 1s;
 
 
         @media (max-width: 1050px) {
@@ -324,7 +326,20 @@ header {
 
     .product-right {
         grid-template-columns: 520px auto;
+        transform: translateX(200px);
+        opacity: 0;
     }
+
+    .first-product, .third-product {
+        transform: translateX(-200px);
+        opacity: 0;
+    }
+
+    /* Classes for adding by JavaScript */
+    .slide-from-side {
+    opacity: 1;
+    transform: translateX(0);
+}
 }
 
 .opinions-page {
@@ -562,6 +577,7 @@ header {
     }
 }
 
+/* Animations */
 @keyframes appearing {
     100% {
         opacity: 1;

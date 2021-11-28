@@ -1,3 +1,31 @@
+/* For displaying products on second (products) page */
+const firstDiv = document.querySelector(".first-product");
+const secondDiv = document.querySelector(".second-product");
+const thirdDiv = document.querySelector(".third-product");
+
+const showProducts = () => {
+  const firstDivRect = firstDiv.getBoundingClientRect();
+  const firstDivY = firstDivRect.top + firstDivRect.height / 2;
+
+  const secondDivRect = secondDiv.getBoundingClientRect();
+  const secondDivY = secondDivRect.top + secondDivRect.height / 2;
+
+  const thirdDivRect = thirdDiv.getBoundingClientRect();
+  const thirdDivY = thirdDivRect.top + thirdDivRect.height / 2;
+
+  if (firstDivY < window.innerHeight) {
+    firstDiv.classList.add("slide-from-side");
+  }
+  if (secondDivY < window.innerHeight) {
+    secondDiv.classList.add("slide-from-side");
+  }
+  if (thirdDivY < window.innerHeight) {
+    thirdDiv.classList.add("slide-from-side");
+  }
+};
+
+/* ********************************************************* */
+
 /* For displaying opinions on page */
 const slide = document.querySelector(".slides");
 let slides = document.querySelectorAll(".opinion");
@@ -36,3 +64,5 @@ slide.addEventListener("transitionend", () => {
 
 startSlide();
 /* ********************************************************************************** */
+
+window.addEventListener("scroll", showProducts);

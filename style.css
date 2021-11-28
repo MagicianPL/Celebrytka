@@ -176,6 +176,7 @@ header .absolute-bottom {
   .homepage .content .image {
     height: 306px;
     overflow: hidden;
+    margin: 0 auto;
   }
 }
 
@@ -264,6 +265,7 @@ header .absolute-bottom {
   min-height: 100vh;
   position: relative;
   padding-top: 80px;
+  /* Classes for adding by JavaScript */
 }
 
 .products-page::before {
@@ -300,6 +302,8 @@ header .absolute-bottom {
   -ms-grid-columns: auto 520px;
       grid-template-columns: auto 520px;
   margin-bottom: 70px;
+  -webkit-transition: all 1s;
+  transition: all 1s;
 }
 
 @media (max-width: 1050px) {
@@ -402,6 +406,21 @@ header .absolute-bottom {
 .products-page .product-right {
   -ms-grid-columns: 520px auto;
       grid-template-columns: 520px auto;
+  -webkit-transform: translateX(200px);
+          transform: translateX(200px);
+  opacity: 0;
+}
+
+.products-page .first-product, .products-page .third-product {
+  -webkit-transform: translateX(-200px);
+          transform: translateX(-200px);
+  opacity: 0;
+}
+
+.products-page .slide-from-side {
+  opacity: 1;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
 }
 
 .opinions-page {
@@ -696,12 +715,12 @@ header .absolute-bottom {
           box-shadow: 0px 0px 3px 3px #C9B079 inset;
 }
 
+/* Animations */
 @-webkit-keyframes appearing {
   100% {
     opacity: 1;
   }
 }
-
 @keyframes appearing {
   100% {
     opacity: 1;
