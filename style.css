@@ -715,6 +715,48 @@ header .absolute-bottom {
           box-shadow: 0px 0px 3px 3px #C9B079 inset;
 }
 
+.socials {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 30px;
+}
+
+footer {
+  padding: 20px 0;
+  background-color: black;
+}
+
+footer .social {
+  padding: 15px 25px;
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  color: #C9B079;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+footer .social:hover {
+  background-color: #36C6CC;
+  color: black;
+}
+
 /* Animations */
 @-webkit-keyframes appearing {
   100% {

@@ -577,6 +577,38 @@ header {
     }
 }
 
+.socials {
+    display: flex;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    justify-content: space-between;
+    font-size: 30px;
+}
+
+footer {
+    padding: 20px 0;
+    background-color: black;
+
+    .social {
+        padding: 15px 25px;
+        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        cursor: pointer;
+        color: $gold-color;
+        transition: all 0.4s;
+
+        &:hover {
+            background-color: #36C6CC;
+            color: black;
+        }
+    }
+}
+
+
 /* Animations */
 @keyframes appearing {
     100% {
