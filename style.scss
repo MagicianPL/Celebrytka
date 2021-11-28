@@ -1,6 +1,7 @@
 $primary-color: #11b9bc;
 $dark-of-primary: #085c5e;
 $gold-color: #C9B079;
+$gap: 16px;
 
 * {
     margin: 0;
@@ -377,6 +378,26 @@ header {
     }
 }
 
+.gallery {
+    img {
+        display: block;
+        width: 100%;
+        margin-bottom: $gap;
+    }
+
+    ul {
+        
+        column-count: 3;
+        list-style: none;
+        column-gap: $gap;
+        padding: $gap;
+    }
+
+    li {
+        break-inside: avoid;
+    }
+}
+
 .localization-page {
     position: relative;
     padding: 30px;
@@ -399,17 +420,20 @@ header {
         opacity: 0.4;
         z-index: -2;
         background-attachment: fixed;
+
+        @media (max-width: 1024px) {
+            background-attachment: scroll;
+        }
     }
 
     h1 {
             margin-bottom: 32px;
             padding-bottom: 24px;
-            border-bottom: 3px solid #C9B079;
+            //border-bottom: 3px solid #C9B079;
             text-align: center;
-            font-size: 30px;
+            font-size: 35px;
             font-weight: bold;
-            text-align: left;
-            display: inline-block;
+            text-align: center;
     }
 
     iframe {
