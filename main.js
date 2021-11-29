@@ -23,8 +23,44 @@ const showProducts = () => {
     thirdDiv.classList.add("slide-from-side");
   }
 };
-
 /* ********************************************************* */
+
+/* For slide Gallery */
+const galleryUl = document.querySelector(".masonry-gallery");
+
+const slideGallery = () => {
+  let galleryY =
+    galleryUl.getBoundingClientRect().top +
+    galleryUl.getBoundingClientRect().height / 20;
+
+  if (galleryY < window.innerHeight) {
+    galleryUl.classList.add("show-gallery");
+  }
+};
+
+/* For slide information on localization page */
+const phoneNumber = document.querySelector(".phone-num");
+const messenger = document.querySelector(".messenger");
+const address = document.querySelector(".address");
+const map = document.querySelector(".map");
+
+const showInfo = () => {
+  if (phoneNumber.getBoundingClientRect().top < window.innerHeight) {
+    phoneNumber.classList.add("show-info");
+  }
+
+  if (messenger.getBoundingClientRect().top < window.innerHeight) {
+    messenger.classList.add("show-info");
+  }
+
+  if (address.getBoundingClientRect().top < window.innerHeight) {
+    address.classList.add("show-info");
+  }
+
+  if (map.getBoundingClientRect().top < window.innerHeight) {
+    map.classList.add("show-info");
+  }
+};
 
 /* For displaying opinions on page */
 const slide = document.querySelector(".slides");
@@ -65,4 +101,8 @@ slide.addEventListener("transitionend", () => {
 startSlide();
 /* ********************************************************************************** */
 
-window.addEventListener("scroll", showProducts);
+window.addEventListener("scroll", () => {
+  showProducts();
+  slideGallery();
+  showInfo();
+});
