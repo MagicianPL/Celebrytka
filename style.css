@@ -814,12 +814,7 @@ nav .nav-link:hover {
   transition: all 1s;
   -webkit-transition-delay: 0.5s;
           transition-delay: 0.5s;
-}
-
-@media (max-width: 472px) {
-  .localization-page .messenger {
-    text-align: center;
-  }
+  text-align: center;
 }
 
 @media (max-width: 358px) {
@@ -837,6 +832,13 @@ nav .nav-link:hover {
 
 .localization-page .messenger i {
   color: #006AFF;
+}
+
+@media (min-width: 359px) and (max-width: 472px) {
+  .localization-page .messenger i {
+    position: relative;
+    left: 14px;
+  }
 }
 
 .localization-page .address {

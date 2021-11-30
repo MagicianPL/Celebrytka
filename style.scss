@@ -648,10 +648,7 @@ nav {
         opacity: 0;
         transition: all 1s;
         transition-delay: 0.5s;
-
-        @media (max-width: 472px) {
-            text-align: center;
-        }
+        text-align: center;
 
         @media (max-width: 358px) {
             text-align: left;
@@ -667,6 +664,11 @@ nav {
 
         i {
         color: #006AFF;
+        
+        @media (min-width: 359px) and (max-width: 472px) {
+            position: relative;
+            left: 14px;
+        }
         }
     }
 
