@@ -7,6 +7,7 @@ function mobileMenu() {
 }
 
 hamburger.addEventListener("click", mobileMenu);
+navMenu.addEventListener("click", mobileMenu);
 
 /* For displaying products on second (products) page */
 const firstDiv = document.querySelector(".first-product");

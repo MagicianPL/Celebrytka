@@ -57,7 +57,7 @@ header img {
   width: 19rem;
   height: 19rem;
   border-radius: 50%;
-  z-index: 10;
+  z-index: 0;
   -webkit-box-shadow: inset 0px 0px 12px 2px #36c6cc;
   box-shadow: inset 0px 0px 12px 2px #36c6cc;
   opacity: 0;
@@ -122,7 +122,8 @@ nav {
           animation: appearing 1s forwards;
   -webkit-animation-delay: 2s;
           animation-delay: 2s;
-  z-index: 20;
+  position: relative;
+  z-index: 100;
 }
 
 nav ul {
@@ -152,9 +153,9 @@ nav .hamburger {
 
 nav .bar {
   display: block;
-  width: 25px;
-  height: 3px;
-  margin: 5px auto;
+  width: 50px;
+  height: 9px;
+  margin: 7px auto;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   background-color: #101010;
@@ -181,6 +182,9 @@ nav .nav-menu {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
     background-color: #fff;
     width: 100%;
     height: 100vh;
@@ -189,7 +193,19 @@ nav .nav-menu {
     transition: 0.3s;
     -webkit-box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
             box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
-    z-index: 20;
+    z-index: 100;
+    background-color: white;
+  }
+}
+
+nav .nav-menu .mobile-icon {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  nav .nav-menu .mobile-icon {
+    display: block;
+    width: 100px;
   }
 }
 
@@ -206,6 +222,13 @@ nav .nav-menu.active {
 nav .nav-link {
   font-size: 20px;
   font-weight: 400;
+}
+
+@media (max-width: 768px) {
+  nav .nav-link {
+    font-size: 26px;
+    font-weight: 700;
+  }
 }
 
 nav .nav-link:hover {
