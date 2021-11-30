@@ -124,6 +124,7 @@ nav {
         @media (max-width: 768px) {
             display: block;
             cursor: pointer;
+            margin-top: 20px;
         }
     }
     
@@ -134,7 +135,7 @@ nav {
         margin: 7px auto;
         -webkit-transition: all 0.3s ease-in-out;
         transition: all 0.3s ease-in-out;
-        background-color: #101010;
+        background-color: #11b9bc;
     }
 
     .nav-menu {
@@ -182,6 +183,7 @@ nav {
     .nav-link{
         font-size: 20px;
         font-weight: 400;
+        color: #11b9bc;
 
         @media (max-width: 768px) {
             font-size: 26px;
