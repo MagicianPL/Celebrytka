@@ -177,7 +177,7 @@ header {
             }
 
             p {
-                margin-bottom: 22px;
+                //margin-bottom: 22px;
                 text-align: center;
                 font-size: 20px;
             }
@@ -192,6 +192,7 @@ header {
                 justify-content: center;
                 align-items: center;
                 gap: 5px;
+                margin-top: 20px;
 
                 @media (max-width: 550px) {
                     display: flex;
@@ -215,6 +216,12 @@ header {
                 padding-right: 1rem;
                 font-size: 22px;
                 margin-top: 3rem;
+            }
+
+            .icon {
+                width: 30px;
+                margin: 10px auto;
+                display: block;
             }
         }
     }

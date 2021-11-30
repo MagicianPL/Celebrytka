@@ -209,7 +209,6 @@ header .absolute-bottom {
 }
 
 .homepage .content .stuff p {
-  margin-bottom: 22px;
   text-align: center;
   font-size: 20px;
 }
@@ -230,6 +229,7 @@ header .absolute-bottom {
       -ms-flex-align: center;
           align-items: center;
   gap: 5px;
+  margin-top: 20px;
 }
 
 @media (max-width: 550px) {
@@ -258,6 +258,12 @@ header .absolute-bottom {
   padding-right: 1rem;
   font-size: 22px;
   margin-top: 3rem;
+}
+
+.homepage .content .stuff .icon {
+  width: 30px;
+  margin: 10px auto;
+  display: block;
 }
 
 .products-page {
