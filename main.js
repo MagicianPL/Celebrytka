@@ -1,3 +1,13 @@
+/* For hamburger menu */
+const hamburger = document.querySelector(".hamburger");
+const navMenu = document.querySelector(".nav-menu");
+
+function mobileMenu() {
+  navMenu.classList.toggle("active");
+}
+
+hamburger.addEventListener("click", mobileMenu);
+
 /* For displaying products on second (products) page */
 const firstDiv = document.querySelector(".first-product");
 const secondDiv = document.querySelector(".second-product");
@@ -101,8 +111,16 @@ slide.addEventListener("transitionend", () => {
 startSlide();
 /* ********************************************************************************** */
 
+/* Show fixed arrow */
+const arrowUp = document.querySelector(".to-top");
+
+const showArrow = () => {
+  arrowUp.classList.add("show-arrow");
+};
+
 window.addEventListener("scroll", () => {
   showProducts();
   slideGallery();
   showInfo();
+  showArrow();
 });

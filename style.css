@@ -7,6 +7,7 @@
 
 html {
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -113,6 +114,102 @@ header .absolute-bottom {
   max-width: 1100px;
   padding: 1rem;
   margin: 0 auto;
+}
+
+nav {
+  opacity: 0;
+  -webkit-animation: appearing 1s forwards;
+          animation: appearing 1s forwards;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+  z-index: 20;
+}
+
+nav ul {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1rem 1.5rem;
+}
+
+nav .hamburger {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  nav .hamburger {
+    display: block;
+    cursor: pointer;
+  }
+}
+
+nav .bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: #101010;
+}
+
+nav .nav-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (max-width: 768px) {
+  nav .nav-menu {
+    position: fixed;
+    left: -100%;
+    top: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    background-color: #fff;
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    -webkit-box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+    z-index: 20;
+  }
+}
+
+nav .nav-menu.active {
+  left: 0;
+}
+
+@media (max-width: 768px) {
+  nav .nav-item {
+    margin: 2.5rem 0;
+  }
+}
+
+nav .nav-link {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+nav .nav-link:hover {
+  color: #475569;
 }
 
 .homepage {
@@ -833,6 +930,27 @@ footer .social {
 footer .social:hover {
   background-color: #36C6CC;
   color: black;
+}
+
+.to-top {
+  font-size: 50px;
+  position: fixed;
+  bottom: 30px;
+  right: 40px;
+  opacity: 0;
+  cursor: pointer;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.to-top:hover {
+  opacity: 1;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+.show-arrow {
+  opacity: 0.3;
 }
 
 /* Animations */
