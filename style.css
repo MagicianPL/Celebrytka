@@ -223,13 +223,14 @@ nav .nav-menu.active {
 nav .nav-link {
   font-size: 20px;
   font-weight: 400;
-  color: #11b9bc;
+  color: black;
 }
 
 @media (max-width: 768px) {
   nav .nav-link {
     font-size: 26px;
     font-weight: 700;
+    color: #11b9bc;
   }
 }
 
