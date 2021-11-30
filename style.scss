@@ -182,10 +182,6 @@ header {
                 font-size: 20px;
             }
 
-            p:nth-child(3) {
-                text-align: left;
-                margin: 30px 0;
-            }
 
             p:nth-of-type(4) {
                 display: flex;
@@ -296,8 +292,11 @@ header {
         .wrapper-box-shadow {
             grid-row: 2/3;
             justify-self: center;
-            border: 2px solid #C9B079;
+            border: 1px solid #C9B079;
             box-shadow: 0px 0px 3px 3px #C9B079 inset;
+            -webkit-box-shadow: 0px 0px 12px 3px rgba(201, 176, 121, 1), 0px 0px 3px 3px #C9B079 inset;
+            -moz-box-shadow: 0px 0px 12px 3px rgba(201, 176, 121, 1), 0px 0px 3px 3px #C9B079 inset;
+            box-shadow: 0px 0px 12px 3px rgba(201, 176, 121, 1), 0px 0px 3px 3px #C9B079 inset;
             max-width: 350px;
 
             @media (max-width: 900px) {
@@ -374,6 +373,7 @@ header {
         font-weight: bold;
         font-size: 22px;
         text-align: center;
+        line-height: 30px;
     }
 
     .stars {
@@ -383,6 +383,8 @@ header {
         gap: 3px;
 
         img {
+            width: 45px;
+
             @media (max-width: 320px) {
                 width: 50px;
             }
@@ -520,9 +522,9 @@ header {
     p {
         display: flex;
         gap: 30px;
-        font-size: 30px;
+        font-size: 25px;
         margin-bottom: 40px;
-        font-weight: bold;
+        //font-weight: bold;
 
         @media (max-width: 1000px) {
             justify-content: center;
@@ -562,6 +564,7 @@ header {
         }
 
         a {
+
             @media (max-width: 472px) {
                 width: 185px;
                 line-height: 33px;
@@ -593,6 +596,14 @@ header {
         i {
             color: #f16623;
         }
+    }
+
+    a {
+        transition: color 0.5s;
+    }
+
+    .phone-num a:hover, .messenger a:hover {
+        color: $gold-color;
     }
 
     iframe {

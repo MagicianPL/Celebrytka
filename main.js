@@ -66,7 +66,7 @@ const showInfo = () => {
 const slide = document.querySelector(".slides");
 let slides = document.querySelectorAll(".opinion");
 let index = 1;
-const interval = 7000;
+const interval = 5500;
 
 const firstClone = slides[0].cloneNode(true);
 const lastClone = slides[slides.length - 1].cloneNode(true);

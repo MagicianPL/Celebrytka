@@ -213,11 +213,6 @@ header .absolute-bottom {
   font-size: 20px;
 }
 
-.homepage .content .stuff p:nth-child(3) {
-  text-align: left;
-  margin: 30px 0;
-}
-
 .homepage .content .stuff p:nth-of-type(4) {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -364,9 +359,10 @@ header .absolute-bottom {
   grid-row: 2/3;
   -ms-grid-column-align: center;
       justify-self: center;
-  border: 2px solid #C9B079;
-  -webkit-box-shadow: 0px 0px 3px 3px #C9B079 inset;
-          box-shadow: 0px 0px 3px 3px #C9B079 inset;
+  border: 1px solid #C9B079;
+  box-shadow: 0px 0px 3px 3px #C9B079 inset;
+  -webkit-box-shadow: 0px 0px 12px 3px #c9b079, 0px 0px 3px 3px #C9B079 inset;
+  box-shadow: 0px 0px 12px 3px #c9b079, 0px 0px 3px 3px #C9B079 inset;
   max-width: 350px;
 }
 
@@ -457,6 +453,7 @@ header .absolute-bottom {
   font-weight: bold;
   font-size: 22px;
   text-align: center;
+  line-height: 30px;
 }
 
 .opinions-page .stars {
@@ -468,6 +465,10 @@ header .absolute-bottom {
           justify-content: center;
   margin-top: 32px;
   gap: 3px;
+}
+
+.opinions-page .stars img {
+  width: 45px;
 }
 
 @media (max-width: 320px) {
@@ -646,9 +647,8 @@ header .absolute-bottom {
   display: -ms-flexbox;
   display: flex;
   gap: 30px;
-  font-size: 30px;
+  font-size: 25px;
   margin-bottom: 40px;
-  font-weight: bold;
 }
 
 @media (max-width: 1000px) {
@@ -744,6 +744,15 @@ header .absolute-bottom {
 
 .localization-page .address i {
   color: #f16623;
+}
+
+.localization-page a {
+  -webkit-transition: color 0.5s;
+  transition: color 0.5s;
+}
+
+.localization-page .phone-num a:hover, .localization-page .messenger a:hover {
+  color: #C9B079;
 }
 
 .localization-page iframe {
